@@ -1,0 +1,150 @@
+/* QuizStyles.css */
+
+body{
+    background-image: url('Background1.jpeg'); /* Set the background image */
+    background-size: 103%; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */ /* Optional: Background color for the page */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Choose a font-family that you prefer */
+    
+
+  }
+  
+  .App {
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .App-header {
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0;
+    right: 0;
+    background-color: #d4686f; /* Background color for the header */
+    z-index: 1000; /* Ensures the header stays above other content */
+    text-align: center;
+    padding: 10px 0; /* Padding inside the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  }
+  
+  .App-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .App-header p {
+    margin: 0;
+    font-size: 1em;
+    color: #181818;
+  }
+  
+  .quiz-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between quiz container and other elements */
+  }
+  
+  .question {
+    margin-bottom: 30px; /* Space below the question */
+  }
+  
+  .question img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Space below the image */
+    border-radius: 8px;
+  }
+  
+  .options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This ensures equal spacing */
+    gap: 10px; /* Space between items */
+  }
+  
+  .option-button {
+    flex: 1 1 calc(50% - 10px); /* Each button takes up half the container width minus the gap */
+    padding: 15px;
+    margin: 0px 10px 10px 10px; /* Top, Right, Bottom, Left */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center; /* Center text within the button */
+  }
+  
+  
+  /* Optional: Media query for smaller screens */
+  @media (max-width: 600px) {
+    .option-button {
+      flex-basis: 100%; /* On smaller screens, each button takes full width */
+    }
+  }
+
+  .result-screen {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .option-button:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .option-button.selected {
+    background-color: lightgray;
+  }
+  
+  .option-button.correct {
+    background-color: rgb(61, 129, 61);
+    color: white;
+  }
+  
+  .option-button.incorrect {
+    background-color: rgb(245, 91, 91);
+    color: white;
+  }
+
+  .result-box {
+    border: 2px solid #4a4a4a; /* Solid border for the box */
+    background-color: #f7f7f7; /* Light background color */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px 0; /* Margin around the box */
+    text-align: center; /* Center the text inside the box */
+    border-radius: 10px; /* Rounded corners for the box */
+  }
+  
+  
+  .confirm-button, .next-button {
+    width: 100%; /* Full width buttons */
+    padding: 12px 0; /* Padding for the buttons */
+    margin-top: 20px; /* Space above the buttons */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #b62222;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .confirm-button:hover, .next-button:hover {
+    background-color: #941111;
+  }
+  
